@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(5,0,0);
+background: linear-gradient(90deg, rgba(5,0,0,1) 0%, rgba(44,15,29,1) 55%, rgba(8,12,49,1) 98%);
+}
+.card-img-top{
+    border-radius: 50px;
+    padding: 20px;
+}
+.card{
+    border-radius: 30px;
+     background-color: #000;
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 1px 2px 0px;
+}
+.card:hover{
+    background-color: #17192c;
+    /* height: 500px; */
+    padding-top: 20px;
+    border-color: rgb(9, 12, 207);
+    border-radius: 70px;
+    box-shadow: rgba(52, 11, 187, 0.9) 0px 1px 2px 0px;
+
+}
+.card-body{
+    padding: 25px;
+    margin-top: -15px;
+}
+.btn-primary{
+    border-radius: 50px;
+    width: 120px;
+    color: #000;
+    background-color: rgb(9, 12, 207);
+}
+.btn-primary:hover{
+    background-color: black;
+    border: none;
+}
+h5{
+    color: rgb(9, 12, 207);
+    text-align: center  ;
+}
+h1{
+    color: #000;
+    font-weight: 700;
+    text-shadow: 2px 1px 5px rgb(9, 12, 207); 
+    text-transform: uppercase;
+}

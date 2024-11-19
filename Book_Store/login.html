@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("book4.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .div1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Transparent black overlay */
+            padding: 0;
+        }
+
+        /* Form Container */
+        .div2 {
+            background: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+            border-radius: 15px;
+            padding: 40px;
+            width: 350px; 
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+
+        label {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #444; 
+            background-color: transparent;
+            color: #e0e0e0;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #007BFF;
+        }
+
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            border-radius: 25px;
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+             
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        
+        label a {
+            color: #ccc;
+        }
+
+        label a:hover {
+            color: #007BFF;
+        }
+
+       
+        .form-element {
+            margin-bottom: 15px; 
+        }
+
+        .form-element:last-child {
+            margin-bottom: 0; 
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="div1">
+        <div class="div2">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <div class="form-element">
+                    <input type="text" id="login-email" placeholder="Username" required><br>
+                </div>
+                <div class="form-element">
+                    <input type="password" id="login-password" placeholder="Password" required><br>
+                </div>
+                <div class="form-element">
+                    <a href="#"><label>Forget Password?</label></a><br>
+                </div>
+                <div class="form-element">
+                    <button type="submit">Login</button><br>
+                </div>
+                <div class="form-element">
+                    <label>Not a Member? <a href="register.html">Signup</a></label>
+                </div>
+            </form>
+            <div id="login-message" style="color: red; margin-top: 10px; display: none;"></div>
+        </div>
+    </div>
+
+    <script>
+        // Retrieve the users from localStorage
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+
+        // Handle login form submission
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get email and password from the input fields
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            // Find the user with the matching email and password
+            const user = users.find(user => user.email === email && user.password === password);
+
+            if (user) {
+                // Redirect based on the user's selected categories
+                if (user.categories.includes('Fiction')) {
+                    window.location.href = 'fiction.html';
+                } else if (user.categories.includes('Non-Fiction')) {
+                    window.location.href = 'non-fiction.html';
+                } else if (user.categories.includes('Novels')) {
+                    window.location.href = 'novels.html';
+                } else if (user.categories.includes('Kids Education')) {
+                    window.location.href = 'kids-education.html';
+                }else if (user.categories.includes('Science')) {
+                    window.location.href = 'science.html';
+                }else if (user.categories.includes('Technology')) {
+                    window.location.href = 'technology.html';
+                }else if (user.categories.includes('Magazines')) {
+                    window.location.href = 'magazines.html';
+                }else {
+                    // Default redirect if no category matches
+                    window.location.href = 'home.html';
+                }
+            } else {
+                // Show error message if user is not found or credentials are incorrect
+                showMessage('login-message', 'Invalid email or password.', 'alert-danger');
+            }
+        });
+
+        // Show message function (for login errors)
+        function showMessage(elementId, message, className) {
+            const messageDiv = document.getElementById(elementId);
+            messageDiv.textContent = message;
+            messageDiv.className = `alert ${className}`;
+            messageDiv.style.display = 'block';
+        }
+
+        //Hide the message after 5 seconds
+        setTimeout(() => {
+            const messageDiv = document.getElementById('login-message');
+            messageDiv.style.display = 'none';
+        }, 5000);
+    </script>
+
+</body>
+
+</html>

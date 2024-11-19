@@ -1,0 +1,85 @@
+
+
+.container {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 2%;
+    /* background-color: white; */
+    /* opacity: 0.2; */
+    box-shadow: 0px 0px 10px rgba(26, 13, 13, 0.1);
+    border-radius: 5%;
+    width: 50%;
+    height: 50%;
+    color: beige;
+    
+}
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("book5.jpg") ;
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+   
+}
+
+h2{
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 2px 4px 7px rgb(70, 19, 224); 
+    text-transform: uppercase;
+}
+
+
+.form-control {
+    border-bottom: 5px double rgb(15, 12, 12);
+    /* width: 600px; */
+    width: 100%;
+    fill: none;
+    background: transparent;
+    
+    /* margin-bottom: 1%; Add spacing between fields */
+    /* padding: 10px; */
+    
+    margin-bottom: 1%; 
+}
+
+
+
+.btnone{
+    color: white; 
+    background-color: black; 
+    border-radius: 10%; 
+    border: none; 
+    width: 20%; 
+    height: 40px; 
+    font-size: 16px; 
+    
+
+}
+
+.btnone:hover{
+    /* width: 25%; */
+    background-color:rgb(70, 19, 224);
+    color: white;
+}
+.form-control:active{
+    background: black;
+}
+
+.form-group {
+    margin-bottom: 15px; 
+}
+
+
+.form-control:focus {
+    background-color: #000; 
+    border-color: rgb(70, 19, 224); 
+    color: white; 
+}
+
+#registration-section {
+    /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent black background for form */
+    padding: 2rem;
+   
+}

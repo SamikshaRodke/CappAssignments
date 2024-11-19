@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Registration Section -->
+        <div id="registration-section">
+            <h2>Register for Free Book Reading</h2>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" class="form-control" required min="10" max="80">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="categories">Select Book Categories:</label>
+                    <select id="categories" class="form-control" multiple required>
+                        <option>Fiction</option>
+                        <option>Non-Fiction</option>
+                        <option>Novels</option>
+                        <option>Kids Education</option>
+                        <option>Science</option>
+                        <option>Technology</option>
+                        <option>Magazines</option>
+                    </select>
+                </div>
+
+                <!-- Password Fields -->
+                <div class="form-group">
+                    <label for="password">Create Password:</label>
+                    <input type="password" id="password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            <div id="registration-message" class="alert mt-3" style="display:none;"></div>
+
+            <!-- Button to go to Login form -->
+            <a href="login.html">
+                <button class="btn btn-link mt-2" id="goToLoginBtn">Already have an account? Sign In</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Success Message Popup (Modal) -->
+    <div class="modal" id="registrationSuccessModal" tabindex="-1" role="dialog" aria-labelledby="registrationSuccessModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registrationSuccessModalLabel">Registration Successful</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Your registration is successful. Do you want to go to the login page?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-primary" id="redirectToLoginBtn">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="register.js"></script>
+</body>
+
+</html>
