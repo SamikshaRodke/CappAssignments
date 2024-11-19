@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
 
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 200px;
+    padding: 10px;
+    margin: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Management System</h1>
+        
+        <!-- Add Employee Form -->
+        <div class="form-section">
+            <h2>Add Employee</h2>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="number" id="id" placeholder="Employee ID" required>
+            <input type="text" id="skill" placeholder="Skill" required>
+            <input type="date" id="doj" placeholder="Date of Joining" required>
+            <input type="text" id="department" placeholder="Department" required>
+            <button onclick="addEmployee()">Add Employee</button>
+        </div>
+
+        <!-- Search Employee -->
+        <div class="form-section">
+            <h2>Search Employee by ID</h2>
+            <input type="number" id="search-id" placeholder="Employee ID" required>
+            <button onclick="searchEmployee()">Search</button>
+            <div id="search-result"></div>
+        </div>
+
+        <!-- Remove Employee -->
+        <div class="form-section">
+            <h2>Remove Employee by ID</h2>
+            <input type="number" id="remove-id" placeholder="Employee ID" required>
+            <button onclick="removeEmployee()">Remove Employee</button>
+        </div>
+        
+        <!-- Display All Employees -->
+        <div class="form-section">
+            <h2>Employee List</h2>
+            <ul id="employee-list"></ul>
+        </div>
+    </div>
+
+    <script src="emp_management.js"></script>
+</body>
+</html>
