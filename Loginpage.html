@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+           display: flex;
+           justify-content: center;
+         
+           
+           background-image: linear-gradient(to right , blue, red);
+           opacity: 0.6;
+           margin : 1px 300px 1px 300px;
+           padding:40px 40px 40px 40px;
+           height: 450px;
+
+
+        }
+        .div2{
+            padding:100px 40px 60px 40px;
+          
+           
+
+        }
+        button{
+            width: 150px;
+            border-radius: 20px;
+            height: 30px;
+            background-color: #007BFF;
+        }
+
+        button:hover {
+            background-color: #0056b3; 
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        label {
+            font-size: 14px;
+            color: #150d0d;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .div2 {
+            background: #fff;
+            border-radius: 10px;
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+            padding: 50px;
+            width: 50%;
+            height: 50%x;
+            /* max-width: 400px; Maximum width of the form */
+            text-align: center;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+            border: none;
+            border-bottom: 2px solid #1a1212;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2">
+            <h1>Login</h1>
+            <hr>
+            <form>
+            <input type="text" placeholder="Username" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <a href="#"><label>Forget Password?</label></a><br>
+            <button>Login</button><br>
+            <label>Not a Member ? <a href="#">Signup</a></label>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
