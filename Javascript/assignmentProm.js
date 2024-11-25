@@ -1,3 +1,6 @@
+// Promise Assignment
+
+
 function checkMail(){
         return new Promise((resolve, reject)=>{
             if(Math.random()>0.5){
