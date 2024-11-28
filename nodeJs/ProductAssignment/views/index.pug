@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  section
+    h1 Product Catalog
+    h2 Admin Products
+    ul
+      if adminProducts.length > 0
+        each product in adminProducts
+          li
+            h3= product.name
+            p= product.description
+            p Price: $#{product.price}
+            p Availability: #{product.availability ? 'In Stock' : 'Out of Stock'}
+      else
+        p No products added by Admin yet.
+
+    h2 User Products
+    ul
+      if userProducts.length > 0
+        each product in userProducts
+          li
+            h3= product.name
+            p= product.description
+            p Price: $#{product.price}
+            p Availability: #{product.availability ? 'In Stock' : 'Out of Stock'}
+      else
+        p No products added by Users yet.

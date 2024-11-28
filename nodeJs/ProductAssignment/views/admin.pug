@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  section
+    h1 Admin - Add Product
+    form(action="/admin/add-product", method="POST")
+      label(for="name") Product Name:
+      input(type="text", id="name", name="name", required)
+
+      label(for="description") Description:
+      textarea(id="description", name="description", required)
+
+      label(for="price") Price:
+      input(type="number", id="price", name="price", step="0.01", required)
+
+      button(type="submit") Add Product
