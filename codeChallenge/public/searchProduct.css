@@ -1,0 +1,55 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(223,180,253);
+    background: linear-gradient(90deg, rgba(223,180,253,1) 0%, rgba(165,171,255,1) 53%, rgba(239,192,246,1) 100%);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgb(174,115,215);
+    background: linear-gradient(90deg, rgba(174,115,215,1) 0%, rgba(95,102,201,1) 53%, rgba(145,57,157,1) 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 1px solid #0a0a0a;
+    background: rgb(174,115,215);
+    background: linear-gradient(90deg, rgba(174,115,215,1) 0%, rgba(95,102,201,1) 53%, rgba(145,57,157,1) 100%);
+}
+
+button {
+    background-color: rgb(42, 46, 104);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(20, 22, 52);
+}
