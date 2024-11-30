@@ -1,0 +1,60 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(218,144,176);
+background: radial-gradient(circle, rgba(218,144,176,1) 0%, rgba(16,75,144,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    background: rgb(208,127,162);
+    background: radial-gradient(circle, rgba(208,127,162,1) 0%, rgba(0,63,136,1) 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1b1515;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #161111;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+button {
+    background-color: rgba(0,63,136,1);
+    color: rgb(158, 149, 149);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(4, 34, 68);
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}

@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(67,99,99);
+background: linear-gradient(0deg, rgba(67,99,99,1) 0%, rgb(58, 58, 88) 100%);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 800px;
+    margin: 105px auto;
+    padding: 20px;
+    background: rgb(67,99,99);
+    background: linear-gradient(0deg, rgb(31, 65, 65) 0%, rgb(43, 43, 87) 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #171515;
+}
+
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.dashboard-item {
+    background-color: rgb(65, 89, 89);
+    width: 48%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+
+.dashboard-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.dashboard-item p {
+    font-size: 1.1rem;
+}
+
+button {
+    background-color: rgb(59, 59, 94);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(39, 39, 119);
+}
+
+a {
+    text-decoration: none; 
+}
+
+a button {
+    margin-top: 10px; 
+}

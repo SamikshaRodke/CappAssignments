@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(39,63,63);
+background: linear-gradient(0deg, rgba(39,63,63,1) 0%, rgba(202,139,170,1) 100%);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 161px auto;
+    padding: 20px;
+    background: rgb(33,49,49);
+background: linear-gradient(0deg, rgba(33,49,49,1) 0%, rgba(158,78,117,1) 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: rgb(149, 97, 122);
+}
+
+
