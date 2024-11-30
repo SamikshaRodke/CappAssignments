@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Products</title>
+    <link rel="stylesheet" href="/searchProduct.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Search Products</h1>
+        <form action="/user/search" method="POST">
+            <label for="name">Search by Name:</label>
+            <input type="text" name="name">
+
+            <label for="category">Search by Category:</label>
+            <input type="text" name="category">
+
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>

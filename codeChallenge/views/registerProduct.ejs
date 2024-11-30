@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Product</title>
+    <link rel="stylesheet" href="/registerProduct.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Register Product</h1>
+        <form action="/admin/register" method="POST">
+            <label for="name">Product Name:</label>
+            <input type="text" name="name" required>
+
+            <label for="id">Product ID:</label>
+            <input type="text" name="id" required>
+
+            <label for="price">Price:</label>
+            <input type="number" name="price" required>
+
+            <label for="category">Category:</label>
+            <input type="text" name="category" required>
+
+            <label for="manufacturingDate">Manufacturing Date:</label>
+            <input type="date" name="manufacturingDate" required>
+
+            <label for="expirationDate">Expiration Date:</label>
+            <input type="date" name="expirationDate" required>
+
+            <button type="submit">Register Product</button>
+        </form>
+    </div>
+</body>
+</html>
